@@ -6,3 +6,6 @@ export const LazyPage2 = () => {
     </h1>
   )
 }
+
+// required for the lazy react method to work
+export default LazyPage2;
