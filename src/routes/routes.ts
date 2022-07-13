@@ -18,6 +18,8 @@ interface Route {
 const Lazy1 = lazy(() => import(/* webpackChunkName: "LazyPage1"*/ '../lazyload/pages/LazyPage1'));
 const Lazy2 = lazy(() => import(/* webpackChunkName: "LazyPage2"*/ '../lazyload/pages/LazyPage2'));
 const Lazy3 = lazy(() => import(/* webpackChunkName: "LazyPage3"*/ '../lazyload/pages/LazyPage3'));
+const ShoppingPage = lazy(() => import(/* webpackChunkName: "LazyPage3"*/ '../component-patterns/pages/ShoppingPage'));
+
 
 // the routes array will be 'casted' as Route type and we need to specify it is going to be an array
 export const routes: Route[] = [
@@ -38,5 +40,11 @@ export const routes: Route[] = [
         path: 'lazy3',
         Component: Lazy3,
         name: 'Lazy 3'
+    },
+    {
+        to: '/shoppingpage',
+        path: 'shoppingpage',
+        Component: ShoppingPage,
+        name: 'Shopping Page'
     }
 ]
