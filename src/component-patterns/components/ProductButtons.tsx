@@ -4,6 +4,8 @@ import styles from '../styles/styles.module.css';
 
 export const ProductButtons = () => {
 
+    // uses the context from our HOC to retrieve the counter and increaseBy 
+    // attributes in the useProduct hook
     const { increaseBy, counter } = useContext(ProductContext);
   
     return (
